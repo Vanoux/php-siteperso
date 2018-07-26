@@ -1,5 +1,3 @@
-put some header here
-
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,4 +1,4 @@
-put some footer here
-<?php include "public/app.js"; ?>
+<script src="app.js"></script>
+
 </body>
 </html>
