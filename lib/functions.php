@@ -19,10 +19,19 @@ function getContent(){
 		include __DIR__.'/../pages/contact.php';
 	}
 }
-echo getContent();
+
 
 
 function getPart($name){
 	include __DIR__ . '/../parts/'. $name . '.php';
+}
+
+
+// Etape 4 = récupérer le contenu du fichier json
+function getUserData(){
+	$contenu = file_get_contents('./../data/user.json');
+	$array = json_decode($contenu, true);
+
+	print_r($array) ;
 }
 
