@@ -2,4 +2,5 @@
 //echo $_GET['page'] == "bio" ;
 
 ?>
-<h3>Salut c'est pas moi!</h3>
+<h3>Salut c'est moi!</h3>
+<p>jfoizjfiojfzoifjhroifjfoijfoifjoijfoijfojljlkjdklscsndcdcfznfeznfkjdnsc;nc;n</p>

@@ -12,11 +12,16 @@ function getContent(){
 		include __DIR__.'/../pages/home.php';
 		
 	} elseif ($_GET['page'] == "bio"){
-	// le reste du code
 		include __DIR__.'/../pages/bio.php';
 
 	} elseif ($_GET['page'] == "contact"){
 		include __DIR__.'/../pages/contact.php';
+
+	} elseif ($_GET['page'] == "accueil"){
+		include __DIR__.'/../pages/home.php';
+
+	} elseif ($_GET['page'] == "admin"){
+		include __DIR__.'/../public/save.php';
 	}
 }
 
@@ -28,10 +33,14 @@ function getPart($name){
 
 
 // Etape 4 = récupérer le contenu du fichier json
-function getUserData(){
-	$contenu = file_get_contents('./../data/user.json');
+function getUserData($data){
+	$contenu = file_get_contents($data);
 	$array = json_decode($contenu, true);
 
 	print_r($array) ;
+	//return ($array);
+
 }
+
+
 

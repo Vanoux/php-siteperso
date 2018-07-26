@@ -17,3 +17,4 @@ getContent();
 getUserData('./../data/user.json');
 getPart('footer');
 
+?>
