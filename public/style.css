@@ -8,6 +8,11 @@
 html {
 	font-size:100%;
 }
-h1 {
+h1, h3 {
 	text-align: center;
+	text-decoration: underline;
+	color: darkolivegreen;
+}
+h4 {
+	color: purple;
 }

@@ -6,7 +6,7 @@ je vous ai créé la première qui est pour le moment incomplète et qui devra c
 la logique pour choisir la page à charger
 */
 
-function getContent(){
+function getContent(){ // pages à charger en fonction des onglets
 
 	if(!isset($_GET['page'])){
 		include __DIR__.'/../pages/home.php';
@@ -19,9 +19,6 @@ function getContent(){
 
 	} elseif ($_GET['page'] == "accueil"){
 		include __DIR__.'/../pages/home.php';
-
-	} elseif ($_GET['page'] == "admin"){
-		include __DIR__.'/../public/save.php';
 	}
 }
 
@@ -33,13 +30,20 @@ function getPart($name){
 
 
 // Etape 4 = récupérer le contenu du fichier json
-function getUserData($data){
-	$contenu = file_get_contents($data);
+function getUserData(){
+	$contenu = file_get_contents('../data/user.json');
 	$array = json_decode($contenu, true);
 
-	print_r($array) ;
-	//return ($array);
-
+		foreach($array as $key => $value){// et afficher le contenu
+			if(!is_array($value)){ //si les valeurs du tableau ne sont pas elles mêmes un tableau, afficher la clef et la valeur.
+				echo "<p>" . $key . " => " . $value . "</p>";
+			} else {// sinon si la valeur du tableau est un second tableau, afficher chaques clef/valeur.
+				foreach($value as $secondArray){
+					echo "<p>" . $secondArray['year'] . " : " . $secondArray['company'] . "</p>";
+				}
+			}
+		}
+//print_r($array); => contenu du fichier json
 }
 
 

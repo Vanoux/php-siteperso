@@ -1,6 +1,8 @@
-<?php 
-//echo $_GET['page'] == "bio" ;
+<h3>Bio de Jane Doe</h3>
 
+<?php 
+getUserData(); // affiche les infos du fichier json recupéré dans la fonction
 ?>
-<h3>Salut c'est moi!</h3>
-<p>jfoizjfiojfzoifjhroifjfoijfoifjoijfoijfojljlkjdklscsndcdcfznfeznfkjdnsc;nc;n</p>
+
+
+
